@@ -1,6 +1,14 @@
-load("@rules_go//go:def.bzl", "go_binary")
+load("@rules_go//go:def.bzl", "go_binary", "go_library")
 
 go_binary(
     name = "app",
+    embed = [":lib"],
+    visibility = ["//visibility:public"],
+)
+
+go_library(
+    name = "lib",
     srcs = ["main.go"],
+    importpath = "",
+    visibility = ["//visibility:private"],
 )
