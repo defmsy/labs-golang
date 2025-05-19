@@ -2,6 +2,24 @@
 
 ## Commands
 
+### Clean cache
+
+```shell
+bazel clean --expunge
+```
+
+### Mod Tidy
+
+```shell
+bazel mod tidy
+```
+
+### Generate BUILD files
+
+```shell
+bazel run //:gazelle
+```
+
 ### Build
 
 ```shell
